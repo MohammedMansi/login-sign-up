@@ -351,3 +351,40 @@
     {
         display: none;
     }
+    /* شاشات الهواتف (أصغر من 760 بكسل) */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 400px; /* تصغير العرض ليناسب شاشة الهاتف */
+        height: 500px; /* زيادة الطول لأننا سنضع العناصر فوق بعضها */
+    }
+
+    /* إخفاء الخلفية المائلة والرسائل الترحيبية لتوفير مساحة */
+    .wrapper .info-text {
+        display: none; 
+    }
+
+    /* جعل صندوق الفورم يأخذ المساحة كاملة */
+    .wrapper .form-box {
+        width: 100%;
+        padding: 0 30px; /* تقليل الحواف الجانبية */
+    }
+
+    /* تعديل حركة الأنميشن لتناسب العرض الجديد */
+    .wrapper .form-box.login .animation,
+    .wrapper.active .form-box.register .animation {
+        transform: translateX(0); /* إلغاء الإزاحة الكبيرة */
+    }
+
+    /* تصغير العناوين لتناسب الشاشة الصغيرة */
+    .form-box h2 {
+        font-size: 26px;
+    }
+}
+
+/* للهواتف الصغيرة جداً (أصغر من 400 بكسل) */
+@media (max-width: 420px) {
+    .wrapper {
+        width: 90%; /* يأخذ 90% من عرض الشاشة مهما كان صغرها */
+        margin: 0 20px;
+    }
+}
